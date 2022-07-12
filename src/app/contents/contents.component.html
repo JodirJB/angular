@@ -1,0 +1,247 @@
+<ul class="nav nav-pills nav-fill mb-3 shadow-lg p-3 mb-5 bg-body rounded contents-container" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Fotos</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Mapa</button>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+        <div id="carouselExampleInterval" class="carousel slide contents-container" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div *ngFor="let image of dataImage" class="carousel-item active" data-bs-interval="20000">
+                    <img src="{{ image }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">MAPA</div>
+</div>
+
+<div class="contents-container">
+    <div class="row">
+        <div class="col">
+            <p class="label-title">
+                {{ data?.title }}
+            </p>
+
+            <p class="address">
+                {{ data?.address }}
+            </p>
+        </div>
+
+        <div class="col">
+
+        </div>
+
+        <div class="col">
+            <p class="price">
+                {{ data?.currency }} {{ data?.price }}
+            </p>
+        </div>
+    </div>
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+        <p class="description">Descripción:</p>
+
+        <p>{{ data?.description }}</p>
+
+        <p>Mostrar más</p>
+
+        <hr>
+
+        <p class="label-title">Detalles de propiedad:</p>
+
+        <div class="d-flex">
+
+        </div>
+        <div class="d-flex justify-content-around">
+            <div class="container-fluid">
+                <div class="row g-3">
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Tipo de propiedad:</p>
+                                <p class="property-details-values">{{ data?.features?.propertyType }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-arrow-turn-up"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Niveles:</p>
+                                <p class="property-details-values">{{ data?.features?.levels }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-ruler-combined"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Tamaño de lote:</p>
+                                <p class="property-details-values">{{ data?.features?.lotSize }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Cochera:</p>
+                                <p class="property-details-values">{{ data?.features?.garage }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-bed"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Habitaciones:</p>
+                                <p class="property-details-values">{{ data?.features?.rooms }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-shower"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Baños:</p>
+                                <p class="property-details-values">{{ data?.features?.bathrooms }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Aire acondicionado:</p>
+                                <p class="property-details-values" *ngIf="data?.features?.airConditioner === true">Si</p>
+                                <p class="property-details-values" *ngIf="data?.features?.airConditioner === false">No</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Terraza:</p>
+                                <p class="property-details-values" *ngIf="data?.features?.terrace === true">Si</p>
+                                <p class="property-details-values" *ngIf="data?.features?.terrace === false">No</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Jardín:</p>
+                                <p class="property-details-values" *ngIf="data?.features?.garden === true">Si</p>
+                                <p class="property-details-values" *ngIf="data?.features?.garden === false">No</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-broom"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Cuarto de servicio:</p>
+                                <p class="property-details-values" *ngIf="data?.features?.serviceRoom === true">Si</p>
+                                <p class="property-details-values" *ngIf="data?.features?.serviceRoom === false">No</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Bodega:</p>
+                                <p class="property-details-values" *ngIf="data?.features?.warehouse === true">Si</p>
+                                <p class="property-details-values" *ngIf="data?.features?.warehouse === false">No</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="d-flex flex-row">
+                            <div class="p-2">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+
+                            <div class="p-2">
+                                <p class="property-details-title">Seguridad:</p>
+                                <p class="property-details-values" *ngIf="data?.features?.security === true">Si</p>
+                                <p class="property-details-values" *ngIf="data?.features?.security === false">No</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="d-flex justify-content-center">
+            <button type="button" (click)="showNext()" class="btn show-next-button">Ver Siguiente</button>
+        </div>
+    </div>
+</div>

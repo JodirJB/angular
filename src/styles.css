@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+.contents-container {
+    margin: 30px;
+    margin-top: 5px;
+}
+
+.show-next-button {
+    color: #ffffff;
+    background-color: #1dd660;
+    border-radius: 20px;
+}
+
+.logo-title {
+    color: #804fcc;
+    font-weight: bold;
+}
+
+.label-title {
+    color: #3972c6;
+    font-weight: bold;
+}
+
+.price {
+    color: #3d3d3d;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.address {
+    color: #5b5b5b;
+}
+
+.description {
+    color: #2d69c2;
+    font-weight: bold;
+}
+
+.property-details-values {
+    color: #4e4e4e;
+    font-weight: bold;
+}
+
+.property-details-title {
+    color: #626262;
+    font-weight: bold;
+}
