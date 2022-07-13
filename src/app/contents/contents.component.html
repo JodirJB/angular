@@ -1,3 +1,4 @@
+<!-- Inicio del navbar menú principal -->
 <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-body rounded">
     <div class="container-fluid">
         <a class="navbar-brand logo-title" href="#">
@@ -58,7 +59,9 @@
         </div>
     </div>
 </nav>
+<!-- Finalización del navbar menú principal -->
 
+<!-- Botones Fotos y Mapa -->
 <ul class="nav nav-pills nav-fill mb-3 shadow-lg p-3 mb-5 bg-body rounded contents-container" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Fotos</button>
@@ -66,6 +69,9 @@
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Mapa</button>
 </ul>
+<!-- Fin de botones Fotos y Mapa -->
+
+<!-- Fotos -->
 <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
         <div id="carouselExampleInterval" class="carousel slide contents-container" data-bs-ride="carousel">
@@ -85,11 +91,16 @@
             </button>
         </div>
     </div>
+    <!-- Fotos -->
+
+    <!-- Mapa -->
     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
         <div #mapDiv class="map-container"></div>
     </div>
+    <!-- Mapa -->
 </div>
 
+<!-- Informacion sobre la vivienda -->
 <div class="contents-container">
     <div class="container">
         <div class="row">
@@ -298,11 +309,15 @@
                 </div>
             </div>
         </div>
+        <!-- Informacion sobre la vivienda -->
+
 
         <hr>
 
+        <!-- Boton ver siguiente donde nos muestra las demas propiedades -->
         <div class="d-flex justify-content-center">
             <button type="button" (click)="showNext()" class="btn show-next-button">Ver Siguiente</button>
         </div>
+        <!-- Boton ver siguiente donde nos muestra las demas propiedades -->
     </div>
 </div>
