@@ -18,12 +18,7 @@ export class ContentsService {
   }
 
   public getImages(id: string): Observable<Images> {
-    return this.httpClient.get<Images>(`${this.URLImage}${[id]}`);
+    return this.httpClient.get<Images>(`${this.URLImage}${id}`);
   }
 
-  // async getImages(id: string): Promise<any> {
-  //   await this.httpClient.get(`${this.URLImage}${id}`).subscribe((subs:any) => {
-  //     return subs.images;
-  //   });
-  // }
 }

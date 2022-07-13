@@ -1,0 +1,84 @@
+.contents-container {
+    margin: 30px;
+    margin-top: 5px;
+}
+
+.container .box {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .box .box-cell.box1 {
+    text-align: justify;
+}
+
+.container .box .box-cell.box2 {
+    text-align: justify
+}
+
+.show-next-button {
+    color: #ffffff;
+    background-color: #1dd660;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.logo-title {
+    color: #804fcc;
+    font-weight: bold;
+}
+
+.label-title {
+    color: #3972c6;
+    font-weight: bold;
+}
+
+.price {
+    color: #3d3d3d;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.address {
+    color: #5b5b5b;
+}
+
+.description {
+    color: #2d69c2;
+    font-weight: bold;
+}
+
+.property-details-values {
+    color: #4e4e4e;
+    font-weight: bold;
+}
+
+.property-details-title {
+    color: #626262;
+    font-weight: bold;
+}
+
+.map-container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.previous-and-next-button {
+    background: #185abc;
+    color: #ffffff;
+    border-radius: 100px;
+}
+
+.img-mapBox {
+    height: 50%;
+    width: 50%;
+}
+
+.showMore {
+    color: #1dd660;
+    font-weight: bold;
+}
